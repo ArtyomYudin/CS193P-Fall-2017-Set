@@ -8,13 +8,38 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+extension Int {
+    var arc4random: Int {
+        if self > 0 {
+            return Int(arc4random_uniform(UInt32(self)))
+        } else if self < 0 {
+            return -Int(arc4random_uniform(UInt32(abs(self))))
+        } else {
+            return 0
+        }
     }
-
-
 }
 
+class ViewController: UIViewController {
+
+    private lazy var game = SetGameModel()
+    
+    @IBOutlet private var cardButtons: [CustomSetCard]!
+
+    @IBAction private func touchCard(_ sender: CustomSetCard) {
+        game.chooseCard()
+    }
+    
+    @IBAction private func touchNewGame(_ sender: UIButton) {
+        game.newGame()
+    }
+    
+    @IBAction private func touchDealCard(_ sender: UIButton) {
+        game.dealCard()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+}
