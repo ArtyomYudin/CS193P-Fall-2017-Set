@@ -28,6 +28,21 @@ import UIKit
         }
     }
     
+    let figureColor = [UIColor.red, .green, .purple]
+    
+    let figureFill: [NSAttributedString.Key: Any] = [
+        .strokeWidth: -5.0,
+        .strokeColor: UIColor.red
+    ]
+    
+    let figureStriped: [NSAttributedString.Key: Any] = [
+        .strokeWidth: 5.0
+    ]
+    
+    let figureOutline: [NSAttributedString.Key: Any] = [
+        .strokeWidth: 5.0
+    ]
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupCustomCard()
@@ -48,6 +63,10 @@ import UIKit
         layer.borderWidth = 3.0
         layer.cornerRadius = 8.0
         backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        titleLabel?.lineBreakMode = .byWordWrapping
+        titleLabel?.numberOfLines = 3
+        titleLabel?.textAlignment = .center
+        // titleLabel?.font = .systemFont(ofSize: 20)
         // clipsToBounds = true
     }
 }

@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nSj-RO-4PD">
-                                <rect key="frame" x="25" y="70" width="325" height="220"/>
+                                <rect key="frame" x="25" y="60" width="325" height="220"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bRs-CW-CRk">
                                         <rect key="frame" x="0.0" y="0.0" width="325" height="30"/>
@@ -221,22 +221,34 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Игра Set" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auE-Qm-Lpp">
-                                <rect key="frame" x="153" y="35" width="69.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HR7-C3-EEa">
+                                <rect key="frame" x="25" y="30" width="325" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сеты: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAH-RM-NeW">
+                                        <rect key="frame" x="0.0" y="0.0" width="158.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Счет: 0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhr-rR-fh5">
+                                        <rect key="frame" x="166.5" y="0.0" width="158.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="HR7-C3-EEa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="6Js-O3-f8P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HR7-C3-EEa" secondAttribute="trailing" constant="25" id="IoL-0Q-xSv"/>
                             <constraint firstItem="zYN-eW-Jre" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="R2I-Ly-uRv"/>
-                            <constraint firstItem="zYN-eW-Jre" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nSj-RO-4PD" secondAttribute="bottom" constant="8" symbolic="YES" id="RbZ-9T-2MH"/>
-                            <constraint firstItem="nSj-RO-4PD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Ty2-Au-ods"/>
+                            <constraint firstItem="zYN-eW-Jre" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nSj-RO-4PD" secondAttribute="bottom" constant="20" id="RbZ-9T-2MH"/>
+                            <constraint firstItem="nSj-RO-4PD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="Ty2-Au-ods"/>
+                            <constraint firstItem="HR7-C3-EEa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="fXv-nJ-Ehc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zYN-eW-Jre" secondAttribute="bottom" constant="20" id="ivh-6n-cwb"/>
                             <constraint firstItem="cmB-ev-gcP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="pnR-LO-LBW"/>
-                            <constraint firstItem="auE-Qm-Lpp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="qv0-Em-S8g"/>
-                            <constraint firstItem="auE-Qm-Lpp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qxc-S1-hHA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nSj-RO-4PD" secondAttribute="trailing" constant="25" id="tC8-Eu-ZvF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

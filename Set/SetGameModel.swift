@@ -9,9 +9,12 @@
 import Foundation
 
 struct SetGameModel {
+        
+    init() {
+    }
     
-    func chooseCard() {
-        print("ChooseCard!")
+    func chooseCard(at index: Int) {
+        print("ChooseCard! \(index)")
     }
     
     func newGame() {
