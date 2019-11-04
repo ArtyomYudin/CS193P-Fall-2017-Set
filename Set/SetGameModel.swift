@@ -9,19 +9,40 @@
 import Foundation
 
 struct SetGameModel {
-        
+    
+    private var desk = PlayingCardDesk()   // колода карт
+    var cardOnTable = [PlayingCard]()   //массив карт которые в данный момент на игральном столе
+    
     init() {
+        for _ in 1...12 {
+            let card = desk.dealCards()!
+            cardOnTable += [card]
+        }
     }
     
-    func chooseCard(at index: Int) {
+    mutating func chooseCard(at index: Int) {
+        if cardOnTable[index].isSelected {
+            cardOnTable[index].isSelected = false
+        } else {
+            cardOnTable[index].isSelected = true
+        }
         print("ChooseCard! \(index)")
+        print(cardOnTable[index])
     }
     
     func newGame() {
-        print("New game!")
+        print("Новая игра в колоде \(desk.cards.count)")
     }
     
-    func dealCard() {
-        print("Deal card!")
+    mutating func dealThreeCard() {
+        if cardOnTable.count != 24 {
+            for _ in 1...3 {
+                //let card = desk.dealCards()!
+                cardOnTable += [desk.dealCards()!]
+            }
+        } else {
+            print("Весь стол занят !")
+        }
+        print("В колоде \(desk.cards.count)")
     }
 }

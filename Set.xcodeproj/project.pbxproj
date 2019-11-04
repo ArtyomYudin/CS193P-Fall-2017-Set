@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F6DBFBB236D5F9A00E16CF9 /* Figure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6DBFBA236D5F9A00E16CF9 /* Figure.swift */; };
 		7FA13A71236ACCDA00F257BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA13A70236ACCDA00F257BB /* AppDelegate.swift */; };
 		7FA13A73236ACCDA00F257BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA13A72236ACCDA00F257BB /* ViewController.swift */; };
 		7FA13A76236ACCDA00F257BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA13A74236ACCDA00F257BB /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F6DBFBA236D5F9A00E16CF9 /* Figure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Figure.swift; sourceTree = "<group>"; };
 		7FA13A6D236ACCDA00F257BB /* Set.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Set.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FA13A70236ACCDA00F257BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FA13A72236ACCDA00F257BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			children = (
 				7FA13A80236AD0C100F257BB /* Supporting Files */,
 				7FA13A72236ACCDA00F257BB /* ViewController.swift */,
+				7F6DBFBA236D5F9A00E16CF9 /* Figure.swift */,
 				7FA13A74236ACCDA00F257BB /* Main.storyboard */,
 				7FA13A83236AF35A00F257BB /* SetGameModel.swift */,
 				7FA13A85236B143400F257BB /* PlayingCard.swift */,
@@ -153,6 +156,7 @@
 			files = (
 				7FA13A73236ACCDA00F257BB /* ViewController.swift in Sources */,
 				7FA13A82236AD14900F257BB /* CustomSetCard.swift in Sources */,
+				7F6DBFBB236D5F9A00E16CF9 /* Figure.swift in Sources */,
 				7FA13A86236B143400F257BB /* PlayingCard.swift in Sources */,
 				7FC9E823236C1C88002337EC /* PlayingCardDesk.swift in Sources */,
 				7FA13A84236AF35A00F257BB /* SetGameModel.swift in Sources */,

@@ -20,24 +20,28 @@ extension Int {
     }
 }
 
+// структура колоды игральных карт
 struct PlayingCardDesk {
     
     private (set) var cards = [PlayingCard]()
     
     init() {
+        // формирование колоды карт. 81 карта в колоде
         for symbol in PlayingCard.Option.all {
             for color in PlayingCard.Option.all {
                 for quantity in PlayingCard.Option.all {
                     for texture in PlayingCard.Option.all {
-                        cards.append(PlayingCard(symbol: symbol, color: color, quantity: quantity, texture: texture))
+                        cards.append(PlayingCard(symbol: symbol, color: color, quantity: quantity, texture: texture, isSelected: false))
                     }
                 }
             }
             
         }
-        cards.shuffle()
+        cards.shuffle() // перетасовка карт
+        //TODO: модифицировать перетасовку карт
     }
     
+    // функция раздачи карт, выданная карта удаляется из колоды
     mutating func dealCards() -> PlayingCard? {
         if cards.count > 0 {
             return cards.remove(at: cards.count.arc4random)

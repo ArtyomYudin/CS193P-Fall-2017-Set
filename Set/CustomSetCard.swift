@@ -28,20 +28,7 @@ import UIKit
         }
     }
     
-    let figureColor = [UIColor.red, .green, .purple]
-    
-    let figureFill: [NSAttributedString.Key: Any] = [
-        .strokeWidth: -5.0,
-        .strokeColor: UIColor.red
-    ]
-    
-    let figureStriped: [NSAttributedString.Key: Any] = [
-        .strokeWidth: 5.0
-    ]
-    
-    let figureOutline: [NSAttributedString.Key: Any] = [
-        .strokeWidth: 5.0
-    ]
+    var hiddenStatus = true
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -59,14 +46,24 @@ import UIKit
     }
     
     func setupCustomCard() {
-        layer.borderColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
-        layer.borderWidth = 3.0
+        layer.borderColor =  #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1) // #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+       // layer.borderWidth = 3.0
         layer.cornerRadius = 8.0
-        backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+       // backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         titleLabel?.lineBreakMode = .byWordWrapping
-        titleLabel?.numberOfLines = 3
-        titleLabel?.textAlignment = .center
-        // titleLabel?.font = .systemFont(ofSize: 20)
-        // clipsToBounds = true
+        //titleLabel?.numberOfLines = 3
+        //titleLabel?.textAlignment = .center
+        titleLabel?.font = .systemFont(ofSize: 18)
+        //clipsToBounds = true
+    }
+    
+    func enabled(_ flag: Bool) {
+        if flag {
+            backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            borderWight = 3.0
+        } else {
+            backgroundColor = #colorLiteral(red: 0, green: 0.5628422499, blue: 0.3188166618, alpha: 1)
+            borderWight = 0.0
+        }
     }
 }
