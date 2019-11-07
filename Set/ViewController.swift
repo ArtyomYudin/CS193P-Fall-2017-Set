@@ -13,44 +13,43 @@ class ViewController: UIViewController {
     private lazy var face = FaceCard()          // лицевая сторона карты
     private lazy var game = SetGameModel()
 
-    @IBOutlet private var cardButtons: [CustomSetCard]!
+    @IBOutlet private var cardButtons: [CustomCardButton]!
 
-    @IBAction private func touchCard(_ sender: CustomSetCard) {
-        if let cardNumber = cardButtons.firstIndex(of: sender) {
+    @IBAction private func touchCard(_ sender: CustomCardButton) -> Void {
+        if let cardNumber = cardButtons.firstIndex(of: sender), sender.isVisible {
             game.chooseCard(at: cardNumber)
-            sender.borderColor = game.cardOnTable[cardNumber].isSelected ? #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1) : #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+            // sender.borderColor = cardBorder(at: cardNumber)
+            updateViewFromModel()
         } else {
-            print("Ouups!")
+            print("Кнопка не имеет карт!")
         }
     }
     
-    @IBAction private func touchNewGame(_ sender: UIButton) {
-        game = SetGameModel()   //пока так, не разобрался правильно ли сделано или нет
+    @IBAction private func touchNewGame(_ sender: UIButton) -> Void {
         game.newGame()
+        game = SetGameModel()   //пока так, не разобрался правильно ли сделано или нет
         updateViewFromModel()
     }
     
-    @IBAction private func touchDealCard(_ sender: UIButton) {
+    @IBAction private func touchDealCard(_ sender: UIButton) -> Void {
         game.dealThreeCard()
         updateViewFromModel()
     }
     
-    
-    override func viewDidLoad() {
+    override func viewDidLoad() -> Void {
         super.viewDidLoad()
         updateViewFromModel()
-       
-        //print(cardOnTable)
     }
     
     // функция отображение карты на кнопке
-    private func renderCard(_ card: PlayingCard, on button: CustomSetCard) {
+    private func renderCard(_ card: PlayingCard, on button: CustomCardButton) -> Void {
         let figure = card.symbol.optionIndex
         let figureQuantity = card.quantity.rawValue
         let figureColor = card.color.optionIndex
         let figureFill = card.texture.optionIndex
         
-        var title = ""//figure[figureIndex]
+        var title = ""
+        
         for index in 1...figureQuantity {
             title += (face.type[figure] + (index == figureQuantity ? "" : "\n"))
         }
@@ -62,21 +61,19 @@ class ViewController: UIViewController {
         button.setAttributedTitle(NSMutableAttributedString(string: title, attributes: attributes), for: .normal)
     }
     
-    private func updateViewFromModel() {
+    private func cardBorder(at index: Int) -> UIColor {
+        return game.cardOnTable[index].isSelected ? #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1) : #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+    }
+    
+    private func updateViewFromModel() -> Void {
         for index in cardButtons.indices {
             if index <= (game.cardOnTable.count - 1) {
                 renderCard(game.cardOnTable[index], on: cardButtons[index])
-                cardButtons[index].enabled(true)
+                cardButtons[index].isButtonVisible(true)
+                cardButtons[index].borderColor = cardBorder(at: index)
             } else {
-                cardButtons[index].enabled(false)
+                cardButtons[index].isButtonVisible(false)
             }
         }
-       // for index in game.cardOnTable.indices{
-            //if let card = desk.dealCards() {
-         //   renderCard(game.cardOnTable[index], on: cardButtons[index])
-            //    cardOnTable += [card]
-            //}
-            
-       // }
     }
 }

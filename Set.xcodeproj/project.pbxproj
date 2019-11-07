@@ -12,7 +12,7 @@
 		7FA13A73236ACCDA00F257BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA13A72236ACCDA00F257BB /* ViewController.swift */; };
 		7FA13A76236ACCDA00F257BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA13A74236ACCDA00F257BB /* Main.storyboard */; };
 		7FA13A79236ACCDA00F257BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA13A77236ACCDA00F257BB /* LaunchScreen.storyboard */; };
-		7FA13A82236AD14900F257BB /* CustomSetCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA13A81236AD14900F257BB /* CustomSetCard.swift */; };
+		7FA13A82236AD14900F257BB /* CustomCardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA13A81236AD14900F257BB /* CustomCardButton.swift */; };
 		7FA13A84236AF35A00F257BB /* SetGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA13A83236AF35A00F257BB /* SetGameModel.swift */; };
 		7FA13A86236B143400F257BB /* PlayingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA13A85236B143400F257BB /* PlayingCard.swift */; };
 		7FC9E823236C1C88002337EC /* PlayingCardDesk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC9E822236C1C88002337EC /* PlayingCardDesk.swift */; };
@@ -26,7 +26,7 @@
 		7FA13A75236ACCDA00F257BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7FA13A78236ACCDA00F257BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7FA13A7A236ACCDA00F257BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7FA13A81236AD14900F257BB /* CustomSetCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSetCard.swift; sourceTree = "<group>"; };
+		7FA13A81236AD14900F257BB /* CustomCardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCardButton.swift; sourceTree = "<group>"; };
 		7FA13A83236AF35A00F257BB /* SetGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGameModel.swift; sourceTree = "<group>"; };
 		7FA13A85236B143400F257BB /* PlayingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCard.swift; sourceTree = "<group>"; };
 		7FC9E822236C1C88002337EC /* PlayingCardDesk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardDesk.swift; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 				7FA13A83236AF35A00F257BB /* SetGameModel.swift */,
 				7FA13A85236B143400F257BB /* PlayingCard.swift */,
 				7FC9E822236C1C88002337EC /* PlayingCardDesk.swift */,
-				7FA13A81236AD14900F257BB /* CustomSetCard.swift */,
+				7FA13A81236AD14900F257BB /* CustomCardButton.swift */,
 				7FA13A7A236ACCDA00F257BB /* Info.plist */,
 			);
 			path = Set;
@@ -155,7 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FA13A73236ACCDA00F257BB /* ViewController.swift in Sources */,
-				7FA13A82236AD14900F257BB /* CustomSetCard.swift in Sources */,
+				7FA13A82236AD14900F257BB /* CustomCardButton.swift in Sources */,
 				7F6DBFBB236D5F9A00E16CF9 /* Figure.swift in Sources */,
 				7FA13A86236B143400F257BB /* PlayingCard.swift in Sources */,
 				7FC9E823236C1C88002337EC /* PlayingCardDesk.swift in Sources */,

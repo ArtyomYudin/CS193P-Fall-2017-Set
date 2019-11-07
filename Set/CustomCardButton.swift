@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class CustomSetCard: UIButton {
+@IBDesignable class CustomCardButton: UIButton {
     
     @IBInspectable var borderWight: CGFloat = 3.0 {
         didSet {
@@ -28,7 +28,7 @@ import UIKit
         }
     }
     
-    var hiddenStatus = true
+    var isVisible = false
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -57,13 +57,16 @@ import UIKit
         //clipsToBounds = true
     }
     
-    func enabled(_ flag: Bool) {
+    func isButtonVisible(_ flag: Bool) -> Void {
         if flag {
             backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             borderWight = 3.0
+            isVisible = true
         } else {
             backgroundColor = #colorLiteral(red: 0, green: 0.5628422499, blue: 0.3188166618, alpha: 1)
             borderWight = 0.0
+            setAttributedTitle(nil, for: .normal)
+            isVisible = false
         }
     }
 }

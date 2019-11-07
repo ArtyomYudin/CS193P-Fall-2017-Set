@@ -9,12 +9,21 @@
 import Foundation
 
 // структура игральной карты
-struct PlayingCard {
+struct PlayingCard: Equatable {
     var symbol: Option      // символ (круг, треугольник и квалрат)
     var color: Option       // цвет символа
     var quantity: Option    // количество символов на карте
     var texture: Option     // текстура символа (залит, заштрихован или контур)
     var isSelected = false  // карта выбрана или нет
+    
+    /*
+    static func == (lhs: PlayingCard, rhs: PlayingCard) -> Bool {
+        return (lhs.symbol == rhs.symbol || lhs.symbol != rhs.symbol) &&
+            (lhs.color == rhs.color || lhs.color != rhs.color) &&
+            (lhs.quantity == rhs.quantity || lhs.quantity != rhs.quantity) &&
+            (lhs.texture == rhs.texture || lhs.texture != rhs.texture)
+    }
+    */
     
     // у каждого свойства карты есть три варианта
     enum Option: Int {
@@ -25,6 +34,5 @@ struct PlayingCard {
         static var all = [Option.option1, .option2, .option3]   // массив всех вариантов свойств
         var optionIndex: Int { return (rawValue - 1) }          // переменная для преобразования значения в индекс
     }
-    
 }
 
