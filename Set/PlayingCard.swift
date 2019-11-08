@@ -15,6 +15,7 @@ struct PlayingCard: Equatable {
     var quantity: Option    // количество символов на карте
     var texture: Option     // текстура символа (залит, заштрихован или контур)
     var isSelected = false  // карта выбрана или нет
+    var isSet = false       // входит ли карта в сет
     
     /*
     static func == (lhs: PlayingCard, rhs: PlayingCard) -> Bool {

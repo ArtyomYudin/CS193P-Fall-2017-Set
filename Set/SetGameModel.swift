@@ -10,11 +10,13 @@ import Foundation
 
 struct SetGameModel {
     
-    private var desk = PlayingCardDesk()        // колода карт
-    var cardOnTable = [PlayingCard]()           // массив карт которые в данный момент на игральном столе
-    var selectedCard = [Int: PlayingCard]()     // Коллекция выбранных карт
+    private (set) var desk = PlayingCardDesk()              // колода карт
+    private (set) var cardOnTable = [PlayingCard]()         // массив карт которые в данный момент на игральном столе
+    private (set) var selectedCard = [Int: PlayingCard]()   // Коллекция выбранных карт
+    private (set) var findSetCount = 0                      // количество найденных сетов
     
-    var selectedCardCount: Int {                // колличество выбранных карт
+    // колличество выбранных карт
+    private var selectedCardCount: Int {
         return selectedCard.count
     }
     
@@ -28,34 +30,34 @@ struct SetGameModel {
     mutating func chooseCard(at index: Int) -> Void {
         if cardOnTable[index].isSelected {
             cardOnTable[index].isSelected = false
+            selectedCard.removeValue(forKey: index)
         } else {
-            if  selectedCardCount < 3 {
-                cardOnTable[index].isSelected = true
-                selectedCard[index] = cardOnTable[index]
-            } else {
-                compareCard()
-            }
+            selectedCardCount == 3 ? compareCard() : nil    //проверка если 3 карты
+            cardOnTable[index].isSelected = true
+            selectedCard[index] = cardOnTable[index]
         }
-    }
-    
-    func newGame() -> Void {
-        print("Новая игра!")
-        
     }
     
     mutating func dealThreeCard() -> Void {
-        if cardOnTable.count != 24 {
-            for _ in 1...3 {
-                //let card = desk.dealCards()!
-                cardOnTable += [desk.dealCards()!]
+        deal: for _ in 1...3 {
+            for index in cardOnTable.indices {
+                if cardOnTable[index].isSet {
+                    cardOnTable[index] = desk.dealCards()!
+                    continue deal
+                }
             }
-        } else {
-            print("Весь стол занят!")
+            cardOnTable.append(desk.dealCards()!)
         }
-        // print("В колоде \(desk.cards.count)")
     }
     
-    mutating func compareCard() -> Void {
+    // удаление найденного сета со стола
+    private mutating func markCardAsSet() -> Void {
+        for key in selectedCard.keys {
+            cardOnTable[key].isSet = true
+        }
+    }
+    
+    private mutating func compareCard() -> Void {
         print("Выбрано три карты! Идет сравнение!")
         
         // суммируем варианты каждого свойства карт в сете.
@@ -68,13 +70,16 @@ struct SetGameModel {
         let textureSet = selectedCard.reduce(0){$0 + $1.value.texture.rawValue}
         
         if (symbolSet % 3 == 0) && (colorSet % 3 == 0) && (quantitySet % 3 == 0) && (textureSet % 3 == 0)   {
+            findSetCount += 1
+            markCardAsSet()
+            dealThreeCard()
             print("Совпадение!!")
         } else {
             print("Не совпали")
             for key in selectedCard.keys {
                 cardOnTable[key].isSelected = false
             }
-            selectedCard = [:]
-       }
+        }
+        selectedCard.removeAll()
     }
 }

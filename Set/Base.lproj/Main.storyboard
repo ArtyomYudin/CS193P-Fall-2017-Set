@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -12,35 +16,35 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Set" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nSj-RO-4PD">
-                                <rect key="frame" x="25" y="60" width="550" height="495"/>
+                                <rect key="frame" x="25" y="84" width="364" height="733"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bRs-CW-CRk">
-                                        <rect key="frame" x="0.0" y="0.0" width="550" height="76"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="115.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7D-fJ-LEs" customClass="CustomCardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="131.5" height="76"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="115.5"/>
                                                 <connections>
                                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dht-Ia-VLT"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbW-rt-767" customClass="CustomCardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="139.5" y="0.0" width="131.5" height="76"/>
+                                                <rect key="frame" x="93" y="0.0" width="85" height="115.5"/>
                                                 <connections>
                                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fuK-Ee-CEx"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Whl-9q-Vdl" customClass="CustomCardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="279" y="0.0" width="131.5" height="76"/>
+                                                <rect key="frame" x="186" y="0.0" width="85" height="115.5"/>
                                                 <connections>
                                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Or5-aI-Kkp"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4e-hb-Aeh" customClass="CustomCardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="418.5" y="0.0" width="131.5" height="76"/>
+                                                <rect key="frame" x="279" y="0.0" width="85" height="115.5"/>
                                                 <connections>
                                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FSl-qH-HHo"/>
                                                 </connections>
@@ -48,28 +52,28 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="86B-Dh-RMa">
-                                        <rect key="frame" x="0.0" y="84" width="550" height="75.5"/>
+                                        <rect key="frame" x="0.0" y="123.5" width="364" height="115.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9t-fb-hth" customClass="CustomCardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="131.5" height="75.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="115.5"/>
                                                 <connections>
                                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NNZ-VN-R6F"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8l-oD-LlM" customClass="CustomCardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="139.5" y="0.0" width="131.5" height="75.5"/>
+                                                <rect key="frame" x="93" y="0.0" width="85" height="115.5"/>
                                                 <connections>
                                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wc3-Jl-jmh"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVU-RO-fJa" customClass="CustomCardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="279" y="0.0" width="131.5" height="75.5"/>
+                                                <rect key="frame" x="186" y="0.0" width="85" height="115.5"/>
                                                 <connections>
                                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XFE-hI-6FC"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQT-nE-HJG" customClass="CustomCardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="418.5" y="0.0" width="131.5" height="75.5"/>
+                                                <rect key="frame" x="279" y="0.0" width="85" height="115.5"/>
                                                 <connections>
                                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0CW-ws-O3h"/>
                                                 </connections>
@@ -77,28 +81,28 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qV7-xH-vDV">
-                                        <rect key="frame" x="0.0" y="167.5" width="550" height="76"/>
+                                        <rect key="frame" x="0.0" y="247" width="364" height="115.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Kg-Fb-oEa" customClass="CustomCardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="131.5" height="76"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="115.5"/>
                                                 <connections>
                                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fKh-vC-P3g"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4R-6l-Gae" customClass="CustomCardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="139.5" y="0.0" width="131.5" height="76"/>
+                                                <rect key="frame" x="93" y="0.0" width="85" height="115.5"/>
                                                 <connections>
                                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Krr-dl-Trp"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="opS-rh-lII" customClass="CustomCardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="279" y="0.0" width="131.5" height="76"/>
+                                                <rect key="frame" x="186" y="0.0" width="85" height="115.5"/>
                                                 <connections>
                                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2s6-tz-gHa"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jn4-ye-7gy" customClass="CustomCardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="418.5" y="0.0" width="131.5" height="76"/>
+                                                <rect key="frame" x="279" y="0.0" width="85" height="115.5"/>
                                                 <connections>
                                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HsY-Gp-2eH"/>
                                                 </connections>
@@ -106,28 +110,28 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cmB-ev-gcP">
-                                        <rect key="frame" x="0.0" y="251.5" width="550" height="76"/>
+                                        <rect key="frame" x="0.0" y="370.5" width="364" height="115.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akn-VZ-CBP" customClass="CustomCardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="131.5" height="76"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="115.5"/>
                                                 <connections>
                                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EbW-rL-oH9"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaN-Dm-cni" customClass="CustomCardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="139.5" y="0.0" width="131.5" height="76"/>
+                                                <rect key="frame" x="93" y="0.0" width="85" height="115.5"/>
                                                 <connections>
                                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pVz-Gk-Dem"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4E5-mA-3yT" customClass="CustomCardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="279" y="0.0" width="131.5" height="76"/>
+                                                <rect key="frame" x="186" y="0.0" width="85" height="115.5"/>
                                                 <connections>
                                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bM5-dz-18e"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAg-wP-hYQ" customClass="CustomCardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="418.5" y="0.0" width="131.5" height="76"/>
+                                                <rect key="frame" x="279" y="0.0" width="85" height="115.5"/>
                                                 <connections>
                                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PBK-8u-lJM"/>
                                                 </connections>
@@ -135,28 +139,28 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oUM-Gv-mLY">
-                                        <rect key="frame" x="0.0" y="335.5" width="550" height="75.5"/>
+                                        <rect key="frame" x="0.0" y="494" width="364" height="115.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J48-D2-3ka" customClass="CustomCardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="131.5" height="75.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="115.5"/>
                                                 <connections>
                                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ccW-Ue-KgO"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrM-xm-lRO" customClass="CustomCardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="139.5" y="0.0" width="131.5" height="75.5"/>
+                                                <rect key="frame" x="93" y="0.0" width="85" height="115.5"/>
                                                 <connections>
                                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kkn-cZ-jKR"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJg-Ky-igC" customClass="CustomCardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="279" y="0.0" width="131.5" height="75.5"/>
+                                                <rect key="frame" x="186" y="0.0" width="85" height="115.5"/>
                                                 <connections>
                                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MDc-GZ-5oO"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQ2-HL-B2i" customClass="CustomCardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="418.5" y="0.0" width="131.5" height="75.5"/>
+                                                <rect key="frame" x="279" y="0.0" width="85" height="115.5"/>
                                                 <connections>
                                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EqE-bL-MuM"/>
                                                 </connections>
@@ -164,28 +168,28 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="N2E-wn-nIN">
-                                        <rect key="frame" x="0.0" y="419" width="550" height="76"/>
+                                        <rect key="frame" x="0.0" y="617.5" width="364" height="115.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPE-4d-LFN" customClass="CustomCardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="131.5" height="76"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="115.5"/>
                                                 <connections>
                                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x82-Mn-Bar"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6BI-B3-5Ys" customClass="CustomCardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="139.5" y="0.0" width="131.5" height="76"/>
+                                                <rect key="frame" x="93" y="0.0" width="85" height="115.5"/>
                                                 <connections>
                                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3eg-ci-rJE"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNt-LC-ODW" customClass="CustomCardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="279" y="0.0" width="131.5" height="76"/>
+                                                <rect key="frame" x="186" y="0.0" width="85" height="115.5"/>
                                                 <connections>
                                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u6m-Iz-VTA"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kT4-xU-UFU" customClass="CustomCardButton" customModule="Set" customModuleProvider="target">
-                                                <rect key="frame" x="418.5" y="0.0" width="131.5" height="76"/>
+                                                <rect key="frame" x="279" y="0.0" width="85" height="115.5"/>
                                                 <connections>
                                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZtW-z0-yYd"/>
                                                 </connections>
@@ -195,7 +199,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zYN-eW-Jre">
-                                <rect key="frame" x="194" y="560" width="212" height="30"/>
+                                <rect key="frame" x="101" y="822" width="212" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ruh-Xk-5jJ">
                                         <rect key="frame" x="0.0" y="0.0" width="102" height="30"/>
@@ -217,17 +221,23 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HR7-C3-EEa">
-                                <rect key="frame" x="25" y="30" width="550" height="20.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HR7-C3-EEa">
+                                <rect key="frame" x="25" y="54" width="364" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сеты: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAH-RM-NeW">
-                                        <rect key="frame" x="0.0" y="0.0" width="271" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="105" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="В колоде: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYr-TY-hSz">
+                                        <rect key="frame" x="113" y="0.0" width="159.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Счет: 0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhr-rR-fh5">
-                                        <rect key="frame" x="279" y="0.0" width="271" height="20.5"/>
+                                        <rect key="frame" x="280.5" y="0.0" width="83.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -250,6 +260,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="cardOnDeskLabel" destination="sYr-TY-hSz" id="bbk-yf-rXg"/>
+                        <outlet property="dealThreeCardButton" destination="BAO-ez-nYF" id="wtJ-lB-gJ0"/>
+                        <outlet property="findSetCountLabel" destination="rAH-RM-NeW" id="Eeu-NI-qfQ"/>
                         <outletCollection property="cardButtons" destination="W7D-fJ-LEs" collectionClass="NSMutableArray" id="akD-39-fdL"/>
                         <outletCollection property="cardButtons" destination="mbW-rt-767" collectionClass="NSMutableArray" id="bUf-Fz-nD4"/>
                         <outletCollection property="cardButtons" destination="Whl-9q-Vdl" collectionClass="NSMutableArray" id="Yg7-Fg-lgm"/>
@@ -278,7 +291,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="37.600000000000001" y="26.53673163418291"/>
+            <point key="canvasLocation" x="36.231884057971016" y="26.116071428571427"/>
         </scene>
     </scenes>
 </document>
