@@ -17,17 +17,18 @@ class ViewController: UIViewController {
         return game.cardOnTable.count
     }
     
+    private var cardOnDeskCount: Int {
+        return game.desk.cards.count
+    }
+    
     @IBOutlet private weak var findSetCountLabel: UILabel!
     @IBOutlet private weak var cardOnDeskLabel: UILabel!
-    
     @IBOutlet private var cardButtons: [CustomCardButton]!
-    
     @IBOutlet private weak var dealThreeCardButton: UIButton!
     
     @IBAction private func touchCard(_ sender: CustomCardButton) -> Void {
         if let cardNumber = cardButtons.firstIndex(of: sender), sender.isVisible {
             game.chooseCard(at: cardNumber)
-            // sender.borderColor = cardBorder(at: cardNumber)
             updateViewFromModel()
         } else {
             print("Кнопка не имеет карт!")
@@ -67,6 +68,7 @@ class ViewController: UIViewController {
             .foregroundColor: face.color[figureColor].withAlphaComponent(CGFloat(face.fill[figureFill]))
         ]
         button.setAttributedTitle(NSMutableAttributedString(string: title, attributes: attributes), for: .normal)
+        button.alpha = card.inSet ? 0.5 : 1.0   // помечаем сет полупрозрачностью
     }
     
     // изменение цвета оконтовки карты если выбрана или нет
@@ -85,7 +87,11 @@ class ViewController: UIViewController {
             }
         }
         findSetCountLabel.text = "Сеты: \(game.findSetCount)"
-        cardOnDeskLabel.text = "В колоде: \(game.desk.cards.count)"
-        dealThreeCardButton.isUserInteractionEnabled = (cardOnTableCount != 24)
+        cardOnDeskLabel.text = "В колоде: \(cardOnDeskCount)"
+        
+        dealThreeCardButton.isUserInteractionEnabled = { () -> Bool in
+            if cardOnTableCount != 24 || game.cardOnTable.contains{ $0.inSet }, cardOnDeskCount != 0 { return true }
+            return false
+        }()
     }
 }

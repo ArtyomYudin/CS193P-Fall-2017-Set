@@ -31,7 +31,7 @@ struct PlayingCardDesk {
             for color in PlayingCard.Option.all {
                 for quantity in PlayingCard.Option.all {
                     for texture in PlayingCard.Option.all {
-                        cards.append(PlayingCard(symbol: symbol, color: color, quantity: quantity, texture: texture, isSelected: false, isSet: false))
+                        cards.append(PlayingCard(symbol: symbol, color: color, quantity: quantity, texture: texture, isSelected: false, inSet: false))
                     }
                 }
             }
