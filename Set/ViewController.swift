@@ -21,6 +21,10 @@ class ViewController: UIViewController {
         return game.desk.cards.count
     }
     
+    private var landscapeOrNot: Bool {
+        return UIDevice.current.orientation.isLandscape
+    }
+    
     @IBOutlet private weak var findSetCountLabel: UILabel!
     @IBOutlet private weak var cardOnDeskLabel: UILabel!
     @IBOutlet private var cardButtons: [CustomCardButton]!
@@ -50,6 +54,11 @@ class ViewController: UIViewController {
         updateViewFromModel()
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        updateViewFromModel()
+    }
+    
     // функция отображение карты на кнопке
     private func renderCard(_ card: PlayingCard, on button: CustomCardButton) -> Void {
         let figure = card.symbol.optionIndex
@@ -60,7 +69,7 @@ class ViewController: UIViewController {
         var title = ""
         
         for index in 1...figureQuantity {
-            title += (face.type[figure] + (index == figureQuantity ? "" : "\n"))
+            title += (face.type[figure] + (index == figureQuantity ? "" : (landscapeOrNot ? " " : "\n")))
         }
         let attributes: [NSAttributedString.Key: Any] = [
             .strokeWidth: -10.0,
